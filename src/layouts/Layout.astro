@@ -9,15 +9,28 @@
 		<title>CreatiVertice</title>
 	</head>
 	<body>
-		<slot />
+		<div>
+			<slot />
+		</div>
 	</body>
 </html>
 
 <style>
-	html,
+	@reference "../styles/global.css";
+
+	html {
+		font-family: system-ui, sans-serif;
+		background: #13151a;
+		color: #fff;
+	}
 	body {
-		margin: 0;
+		@apply grid place-content-center p-20;
+		/* margin: 0;
 		width: 100%;
-		height: 100%;
+		height: 100%; */
+	}
+
+	body > div {
+		@apply container;
 	}
 </style>
